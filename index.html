@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="Wemimi spreadsheet auf Deutsch: Kategorien bei CAFANS entdecken, Produktlinks vergleichen, Größen prüfen, QC-Fotos lesen und Versandkosten einschätzen.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="Wemimi spreadsheet – Kategorien und Kaufcheck">
+  <meta property="og:description" content="Ein deutscher Einkaufsratgeber für Produktlinks, Größen, QC-Fotos und Versand.">
+  <title>Wemimi spreadsheet – Kategorien, Größen &amp; QC-Fotos</title>
+  <style>
+    :root{color-scheme:light;--paper:#f4eee4;--ink:#27221f;--plum:#53263f;--line:#bcaa9c;--card:#fffaf3;--muted:#584b45}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}
+    .wrap{width:min(72rem,calc(100% - 2rem));margin-inline:auto}
+    a{color:var(--plum);text-underline-offset:.24em}
+    a:focus-visible,summary:focus-visible{outline:3px solid #93461c;outline-offset:4px}
+    .mast{display:flex;justify-content:space-between;align-items:center;gap:.7rem;padding-block:.9rem;border-bottom:1px solid var(--line)}
+    .mast p{margin:0;color:var(--muted)}
+    .mast a{font-weight:800;letter-spacing:.13em}
+    h1,h2,h3{line-height:1.12;text-wrap:balance}
+    h1,h2{font-family:Georgia,serif;font-weight:500}
+    h1{font-size:clamp(2.5rem,7.5vw,6.2rem);letter-spacing:-.048em;margin:.65rem 0 1rem}
+    h2{font-size:clamp(1.8rem,4vw,3.15rem);margin:.1em 0 .55em}
+    h3{margin:0 0 .6rem}
+    p{margin:0 0 1rem}
+    .categories{margin-block:1rem 1.65rem}
+    .categories h2{font:700 .95rem/1.3 system-ui,sans-serif;margin:0 0 .55rem}
+    .categories ul{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));list-style:none;padding:0;margin:0;gap:.4rem}
+    .categories a{display:flex;align-items:center;min-height:2.8rem;padding:.48rem .65rem;background:var(--card);border:1px solid var(--line);font-size:.9rem;font-weight:650;text-decoration:none}
+    .categories a:hover{border-color:var(--plum);text-decoration:underline}
+    .hero{display:grid;grid-template-columns:1.15fr 1fr;align-items:center;gap:clamp(1rem,4vw,3rem);padding:clamp(1rem,4vw,3rem);background:var(--plum);color:#fff9f3;border-radius:1.3rem}
+    .hero p{max-width:49ch}
+    .button{display:inline-flex;padding:.65rem .95rem;background:#fff9f3;color:var(--plum);border-radius:.25rem;font-weight:750}
+    figure{margin:0;min-width:0}
+    img{display:block;width:100%;height:auto;background:#fff}
+    .hero img{aspect-ratio:4/3;object-fit:contain;border-radius:.7rem}
+    figcaption{padding:.48rem 0;font-size:.88rem}
+    .section{padding-block:clamp(1.8rem,4vw,3.6rem);border-bottom:1px solid var(--line)}
+    .gallery,.articles{display:grid;gap:1rem}
+    .gallery{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .gallery img{aspect-ratio:1;object-fit:contain}
+    .articles{grid-template-columns:repeat(3,minmax(0,1fr))}
+    article{background:var(--card);border-top:3px solid var(--plum);padding:1.1rem}
+    article p:last-child{margin:0}
+    details{border-top:1px solid var(--line);padding:.7rem 0}
+    summary{cursor:pointer;font-weight:700;padding:.25rem 0}
+    details p{max-width:68ch;margin:.45rem 0 .3rem}
+    footer{padding-block:1.4rem}
+    @media(max-width:50rem){.categories ul{grid-template-columns:repeat(3,minmax(0,1fr))}.articles{grid-template-columns:1fr}}
+    @media(max-width:38rem){.hero{grid-template-columns:1fr}.categories ul,.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "name": "Wemimi spreadsheet – Kategorien, Größen & QC-Fotos",
+        "inLanguage": "de",
+        "description": "Wemimi spreadsheet auf Deutsch: Kategorien bei CAFANS entdecken, Produktlinks vergleichen, Größen prüfen, QC-Fotos lesen und Versandkosten einschätzen."
+      },
+      {
+        "@type": "FAQPage",
+        "inLanguage": "de",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Was ist ein Wemimi spreadsheet?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ein Wemimi spreadsheet ist eine nach Kategorien geordnete Sammlung von Produkthinweisen und Links. Diese Seite bietet einen deutschsprachigen Ratgeber und führt zu den Kategorien von CAFANS."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Was zeigen QC-Fotos aus dem Lager?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "QC-Fotos zeigen sichtbare Merkmale eines konkreten Artikels, etwa Farbe, Nähte und Etiketten. Für die Passform brauchst du zusätzlich Maße. Für einen Echtheitsnachweis sind separate Belege erforderlich."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wie schätze ich die Versandkosten nach Deutschland ein?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Gib Zielort, Paketmaße und Gewicht beim Versanddienst an. Prüfe, ob tatsächliches Gewicht oder Volumengewicht berechnet wird, und berücksichtige mögliche Gebühren und Einfuhrkosten in deiner Gesamtrechnung."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wohin führen die Produktkategorien?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Die Kategorien öffnen die entsprechenden Übersichten bei CAFANS. Angaben zu verfügbaren Varianten und aktuellen Konditionen prüfst du auf der jeweiligen Angebotsseite."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/lpngx/">
+</head>
+<body>
+  <header class="wrap mast">
+    <a href="https://www.cafans.com">CAFANS</a>
+    <p>Einkaufsratgeber auf Deutsch</p>
+  </header>
+  <main class="wrap">
+    <nav class="categories" aria-labelledby="kategorien">
+      <h2 id="kategorien">Kategorien bei CAFANS</h2>
+      <ul>
+        <li><a href="https://cafans.com/category-911-Shoes.html">Schuhe</a></li>
+        <li><a href="https://cafans.com/category-912-Hoodies%2FSweaters.html">Hoodies &amp; Pullover</a></li>
+        <li><a href="https://cafans.com/category-913-T-Shirts.html">T-Shirts</a></li>
+        <li><a href="https://cafans.com/category-914-Jackets.html">Jacken</a></li>
+        <li><a href="https://cafans.com/category-915-Pants%2FShorts.html">Hosen &amp; Shorts</a></li>
+        <li><a href="https://cafans.com/category-916-Headwear.html">Caps &amp; Mützen</a></li>
+        <li><a href="https://cafans.com/category-917-Sets.html">Sets</a></li>
+        <li><a href="https://cafans.com/category-918-underwear%2Funderpants.html">Unterwäsche</a></li>
+        <li><a href="https://cafans.com/category-919-Jersey.html">Trikots</a></li>
+        <li><a href="https://cafans.com/category-920-Accessories.html">Accessoires</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero" aria-labelledby="titel">
+      <div>
+        <h1 id="titel">Wemimi spreadsheet</h1>
+        <p>Von Sneakern bis Schmuck: Finde eine passende Kategorie bei CAFANS und bringe Ordnung in deine Auswahl. Der unabhängige Ratgeber zeigt, welche Angaben du vom ersten Produktlink bis zur Versandfreigabe prüfen kannst.</p>
+        <a class="button" href="https://www.cafans.com">CAFANS öffnen</a>
+      </div>
+      <figure>
+        <img src="https://www.ego-sport.pl/hpeciai/a63432ceca39f4d6581781f14515d795/pol_pl_Nike-buty-meskie-Air-Force-1-07-CW2288-111-biale-14786_1.webp" width="800" height="600" alt="Weißer Nike Air Force 1 ’07 mit weißem Swoosh" fetchpriority="high">
+        <figcaption>Nike Air Force 1 ’07</figcaption>
+      </figure>
+    </section>
+
+    <section class="section" aria-labelledby="auswahl">
+      <h2 id="auswahl">Vier Vorlagen für deine Produktnotizen</h2>
+      <p>Die Markenbilder dienen als Stilbeispiele. Maße, Material und Details prüfst du am konkreten Angebot.</p>
+      <div class="gallery">
+        <figure>
+          <img src="https://nz.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-woven-monogram-print-t-shirt--FVTE22E3P107_PM2_Front%20view.png?hei=480&amp;wid=480" width="480" height="480" alt="Helles Louis-Vuitton-T-Shirt mit Monogrammmuster" loading="lazy" decoding="async">
+          <figcaption>Louis Vuitton · Brustweite und Länge notieren</figcaption>
+        </figure>
+        <figure>
+          <img src="https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1751298339/838745_3HBC4_2600_001_100_0000_Light.jpg" width="640" height="640" alt="Gucci-Baseballcap aus GG-Canvas" loading="lazy" decoding="async">
+          <figcaption>Gucci · Kopfumfang und Verschluss prüfen</figcaption>
+        </figure>
+        <figure>
+          <img src="https://assets.hermes.com/is/image/hermesproduct/%E3%82%AB%E3%83%AC-90-%E3%80%8A%E3%81%99%E3%81%B9%E3%81%A6%E3%81%AF%E9%9E%8D%E3%81%AE%E4%B8%AD%E3%81%AB%E3%80%8B--004204S%2005-flat-wm-3-0-0-1000-1000_g.jpg?wid=480" width="480" height="480" alt="Flach ausgelegtes Seidentuch Hermès Carré 90 mit grafischem Sattelmuster" loading="lazy" decoding="async">
+          <figcaption>Hermès · Tuchmaße und Saum erfassen</figcaption>
+        </figure>
+        <figure>
+          <img src="https://www.jackroad.co.jp/img/goods/1/cd167.jpg" width="480" height="480" alt="Dior Petit CD Halskette mit CD-Motiv" loading="lazy" decoding="async">
+          <figcaption>Dior · Kettenlänge und Schließe ansehen</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="ratgeber">
+      <h2 id="ratgeber">Drei Checks vor der Bestellung</h2>
+      <div class="articles">
+        <article>
+          <h3>Wemimi Produktlinks und Größen vergleichen</h3>
+          <p>Notiere für jeden Weidian- oder Taobao-Produktlink den Modellcode, die Farbe und die konkrete Variante. Prüfe, ob der Link noch zum selben Artikel führt und ob die Größentabelle zur gewählten Variante gehört.</p>
+          <p>Bei Sneakern vergleichst du die Innenlänge mit einem passenden Paar. Bei Hoodies und Jacken helfen Brustweite, Schulterbreite und Ärmellänge. Bei Hosen prüfst du Bundweite und Innenbeinlänge. Miss dein Vergleichsstück flach und achte darauf, ob die Tabelle eine einfache Breite oder den Umfang angibt.</p>
+        </article>
+        <article>
+          <h3>Wemimi QC-Fotos richtig lesen</h3>
+          <p>Vergleiche die Lagerfotos mit genau der Variante, die du ausgewählt hast. Bei Schuhen helfen Seitenansicht, Sohlenprofil und Fersendetail. Bei Kleidung prüfst du sichtbare Nähte, Materialetikett und Farbabweichungen.</p>
+          <p>Fehlt bei einem Trikot die Rückansicht oder bei einem Set ein Teil, fordere gezielt ein Foto an. Bei Schmuck hilft ein Bild mit Maßstab. Kläre die Bedingungen und Fristen für einen Umtausch, bevor du das Paket freigibst.</p>
+        </article>
+        <article>
+          <h3>Wemimi Versandkosten einschätzen</h3>
+          <p>Trage Artikelpreis, Inlandsversand und mögliche Gebühren des Einkaufsdienstes getrennt ein. Ergänze anschließend den internationalen Versand anhand der Paketmaße und des Zielorts.</p>
+          <p>Bei einer Sammelsendung vergleiche das Volumengewicht mit dem tatsächlichen Gewicht. Prüfe für Deutschland, Österreich oder die Schweiz die Angaben für das jeweilige Zielland. Halte mögliche Einfuhrkosten, Wechselkurs und Rücksendebedingungen in deiner Rechnung fest.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="fragen">
+      <h2 id="fragen">Häufige Fragen</h2>
+      <details>
+        <summary>Was ist ein Wemimi spreadsheet?</summary>
+        <p>Ein Wemimi spreadsheet ist eine nach Kategorien geordnete Sammlung von Produkthinweisen und Links. Diese Seite bietet einen deutschsprachigen Ratgeber und führt zu den Kategorien von CAFANS.</p>
+      </details>
+      <details>
+        <summary>Was zeigen QC-Fotos aus dem Lager?</summary>
+        <p>QC-Fotos zeigen sichtbare Merkmale eines konkreten Artikels, etwa Farbe, Nähte und Etiketten. Für die Passform brauchst du zusätzlich Maße. Für einen Echtheitsnachweis sind separate Belege erforderlich.</p>
+      </details>
+      <details>
+        <summary>Wie schätze ich die Versandkosten nach Deutschland ein?</summary>
+        <p>Gib Zielort, Paketmaße und Gewicht beim Versanddienst an. Prüfe, ob tatsächliches Gewicht oder Volumengewicht berechnet wird, und berücksichtige mögliche Gebühren und Einfuhrkosten in deiner Gesamtrechnung.</p>
+      </details>
+      <details>
+        <summary>Wohin führen die Produktkategorien?</summary>
+        <p>Die Kategorien öffnen die entsprechenden Übersichten bei CAFANS. Angaben zu verfügbaren Varianten und aktuellen Konditionen prüfst du auf der jeweiligen Angebotsseite.</p>
+      </details>
+    </section>
+  </main>
+  <footer class="wrap">
+    <a href="https://www.cafans.com">Zur CAFANS-Startseite</a>
+  </footer>
+</body>
+</html>
